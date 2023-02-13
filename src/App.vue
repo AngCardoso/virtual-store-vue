@@ -37,5 +37,8 @@ export default{
   background:  hsl(340, 10%, 80%);
   background: linear-gradient(28deg, hsl(309, 18%, 60%) 0%, hsl(340, 10%, 80%) 50%);
 }
+h1{
+      font-size: 3rem;
+  }
 
 </style>

@@ -112,12 +112,28 @@ export default{
         .displayed-item{
             background-color: #FFFFFF;
             border-radius: 15px;
-            display: inline-block;
-
-            img{
-                padding-top:5px ;
-                max-width: 12vw;
+    
+            
+            figure{
+                height: 100%;
+                display: grid;
+                gap: 2vw;
             }
+            img{
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: contain;
+                border-radius: 15px;
+                max-width: 96%;
+                padding: 4%;
+            }
+
+            figcaption{
+                overflow: hidden;
+                color: #000000;
+            }
+
+            
         }
  
 }

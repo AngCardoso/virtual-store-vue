@@ -1,11 +1,11 @@
 <template>
   <nav>
-    <router-link to="/"> <h1> Your online store</h1></router-link>
+    <router-link to="/"> <h2> Your online store</h2></router-link>
     <div id="others">
-      <router-link to="/"><h1>Home</h1></router-link> 
-      <router-link to="/login"><h1>Login</h1></router-link>
-      <router-link to="/products"><h1>Products</h1></router-link>
-      <router-link to="/about"><h1>About</h1></router-link>
+      <router-link to="/"><h2>Home</h2></router-link> 
+      <router-link to="/login"><h2>Login</h2></router-link>
+      <router-link to="/products"><h2>Products</h2></router-link>
+      <router-link to="/about"><h2>About</h2></router-link>
       
     </div>
   </nav>   
