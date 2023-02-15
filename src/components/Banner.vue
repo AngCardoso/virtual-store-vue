@@ -35,6 +35,7 @@ export default{
     border-radius: 28px;
     margin-top: 1rem;
     transition:0.5s;
+    cursor: pointer;
 }
 
 .main-container{

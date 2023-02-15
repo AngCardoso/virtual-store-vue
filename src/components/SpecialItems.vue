@@ -8,8 +8,14 @@
                 <figcaption>
                         {{ phone.description }}
                 </figcaption>
-            </figure>
+            <div class="buttons">
+                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow">Buy Now</button>
+            </div>                    
+            </figure>        
+
         </div>   
+
     </div>
     <hr>
 
@@ -21,7 +27,12 @@
                 <figcaption>
                         {{ lp.description }}
                 </figcaption>
+            <div class="buttons">
+                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow">Buy Now</button>
+            </div>                
             </figure>
+
         </div>       
     </div>
     <hr>
@@ -34,7 +45,12 @@
                 <figcaption>
                         {{ fr.description }}
                 </figcaption>
+            <div class="buttons">
+                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow">Buy Now</button>
+            </div>                
             </figure>
+
         </div>       
     </div>
     <hr>
@@ -47,7 +63,12 @@
                 <figcaption>
                         {{ sk.description }}
                 </figcaption>
+            <div class="buttons">
+                <button class="addToCart">Add to Cart</button>
+                <button class="buyNow">Buy Now</button>
+            </div>                
             </figure>
+
         </div>       
     </div>
     <hr>
@@ -94,25 +115,52 @@ export default{
 }
 </script>
 <style lang="scss" scoped>
-    $Pdist: 4vh 0;
+ 
+ $Pdist: 4vh 0;
+ 
+ @mixin toButtons{
+    border:#707070;
+    padding: 0.8rem;
+    border-radius: 14px;
+    margin: 0.2rem;
+    cursor:pointer;
+    transition:0.4s;
+    }  
+
+    .buttons{
+        .addToCart{
+            @include toButtons;
+        }
+        .addToCart:hover{
+            color: white;
+            background-color: darkgreen;
+        }
+
+        .buyNow{
+            @include toButtons;
+        }
+        .buyNow:hover{
+            color: white;
+            background-color: goldenrod;
+        }
+    }
+    
     h2{
         padding:$Pdist;
     }
+
     
     .displayer{
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: 28vh;
-        grid-auto-rows: 38vh;
-        gap: 2vw;
-        overflow-x: auto;
-        padding:$Pdist;
-        
-
+        grid-auto-columns: 34vh;
+        grid-auto-rows: 42vh;
+        gap: 2vw;       
+        padding-bottom: 5vh;
         .displayed-item{
             background-color: #FFFFFF;
-            border-radius: 15px;
-    
+            border-radius: 25px;
+            border: 2px solid transparent;
             
             figure{
                 height: 100%;
@@ -135,11 +183,13 @@ export default{
 
             
         }
- 
+
+        .displayed-item:hover{
+            border: 2px solid darkgray;
+        }
 }
 hr{
     border: 4px solid #707070;
-    height: fit-content;
     border-radius: 25px;
 } 
 
